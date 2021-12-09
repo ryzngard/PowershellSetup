@@ -5,6 +5,10 @@ Import-Module PowerLine
 Import-Module PSGit
 Import-Module posh-git
 Import-Module PSReadLine
+Import-Module oh-my-posh
+
+Set-Prompt
+set-theme Darkblood
 
 # Set up colors
 [console]::BackgroundColor = "black"

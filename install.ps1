@@ -1,40 +1,4 @@
-Install-Hub 
-Install-Powerline 
-Install-PowerlineFonts
-Install-PSGit 
-Install-Profile
-
 # Installation function definition 
-
-function Install-Scoop {
-    iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
-}
-
-function Requires-Scoop {
-    try {
-        Get-Command scoop 
-        return $True
-    }
-    catch {
-        Install-Scoop
-    }
-}
-
-function Install-Hub {
-    Requires-Scoop
-
-    scoop install hub
-}
-
-function Install-Powerline {
-    install-module powerline -Scope CurrentUser -AllowClobber -Confirm
-    $powerlineConfig = Get-ResourcePath "Powerline_Configuration.psd1" 
-    $destination = Join-Path $env:AppData "powershell/HuddledMasses.org/Powerline/Configuration.psd1"
-
-    Ensure-Directory $destination 
-
-    Move-Item $powerlineConfig $destination
-}
 
 function Install-PowerlineFonts {
     $fontsScript = Get-ResourcePath "fonts/install.ps1"
@@ -55,7 +19,8 @@ function Get-ScriptDirectory {
 }
 
 function Get-ResourcePath($relativePath) {
-    return Join-Path Get-ScriptDirectory $relativePath
+    $scriptDirectory = Get-ScriptDirectory
+    return Join-Path $scriptDirectory $relativePath
 }
 
 function Ensure-Directory($path) {
@@ -66,3 +31,18 @@ function Ensure-Directory($path) {
 
     New-Item -ItemType Directory $directory
 }
+
+# Installation Logic
+
+& winget import -i ./winget.exp
+Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force -Scope CurrentUser
+Install-Package psgit -Scope CurrentUser -AllowClobber -Confirm
+Install-Package powerline -Scope CurrentUser -AllowClobber -Confirm
+Install-PowerlineFonts
+
+$powerlineConfig = Get-ResourcePath "Powerline_Configuration.psd1" 
+$destination = Join-Path $env:AppData "powershell/HuddledMasses.org/Powerline/Configuration.psd1"
+
+Ensure-Directory $destination 
+
+Copy-Item $powerlineConfig $destination
