@@ -46,3 +46,10 @@ $destination = Join-Path $env:AppData "powershell/HuddledMasses.org/Powerline/Co
 Ensure-Directory $destination 
 
 Copy-Item $powerlineConfig $destination
+
+$themePath = Get-ResourcePath "darkblood.omp.json"
+Copy-Item $themePath (get-children $PROFILE).Directory
+
+Install-Module -Scope CurrentUser Pansies -AllowClobber
+Install-Module -Scope CurrentUser posh-docker,posh-git,Powerline,PSColor,PSGit
+Install-Module -Scope CurrentUser -AllowPrerelease -Force
