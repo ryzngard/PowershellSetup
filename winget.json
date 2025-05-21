@@ -22,7 +22,10 @@
 					"PackageIdentifier" : "Microsoft.VisualStudioCode"
 				},
 				{
-					"PackageIdentifier" : "Proton.ProtonMailBridge"
+					"PackageIdentifier" : "Microsoft.Powershell"
+				},
+				{
+					"PackageIdentifier": "CoreyButler.NVMforWindows"
 				}
 			],
 			"SourceDetails" : 
