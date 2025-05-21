@@ -7,79 +7,22 @@
 			"Packages" : 
 			[
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community"
-				},
-				{
-					"PackageIdentifier" : "CoreyButler.NVMforWindows"
-				},
-				{
-					"PackageIdentifier" : "Discord.Discord"
-				},
-				{
 					"PackageIdentifier" : "Git.Git"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.Edge"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.WindowsTerminal"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.Office"
 				},
 				{
 					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.OneDrive"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.Teams"
-				},
-				{
-					"PackageIdentifier" : "vim.vim"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community.Preview"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
-				},
-				{
-					"PackageIdentifier" : "ExpressVPN.ExpressVPN"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
+					"PackageIdentifier" : "Neovim.Neovim"
 				},
 				{
 					"PackageIdentifier" : "GitHub.cli"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.CLRTypesSQLServer.2019"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.Teams"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VisualStudioCode"
 				},
 				{
-					"PackageIdentifier" : "Nvidia.GeForceExperience"
-				},
-				{
-					"PackageIdentifier" : "Nvidia.PhysX"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.WebDeploy"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.DotNet.SDK.7"
+					"PackageIdentifier" : "Proton.ProtonMailBridge"
 				}
 			],
 			"SourceDetails" : 

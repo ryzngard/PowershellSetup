@@ -34,7 +34,7 @@ function Ensure-Directory($path) {
 
 # Installation Logic
 
-& winget import -i ./winget.exp
+& winget import -i ./winget.json
 Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force -Scope CurrentUser
 Install-Package psgit -Scope CurrentUser -AllowClobber -Confirm
 Install-Package powerline -Scope CurrentUser -AllowClobber -Confirm
